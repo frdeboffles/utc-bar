@@ -1,0 +1,44 @@
+{
+  "name": "utc-bar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.frd.utc-bar",
+    "productName": "UTC Bar",
+    "icon": "icons/clock-icon",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "default"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "fr.deboffles@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "electron-settings": "^4.0.2"
+  },
+  "devDependencies": {
+    "electron": "^24.1.1",
+    "electron-builder": "^23.6.0"
+  }
+}

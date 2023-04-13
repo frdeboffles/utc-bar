@@ -1,0 +1,28 @@
+# Node.js dependencies
+node_modules/
+
+# IntelliJ specific files
+.idea
+*.iml
+
+# Electron distribution and build files
+dist/
+build/
+electron-builder.yaml
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux specific files
+.directory
+*.swp
+*.bak
+*.tmp
+*~
