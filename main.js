@@ -15,6 +15,13 @@ async function createTray() {
 
   const contextMenu = Menu.buildFromTemplate([
     {
+      label: "Copy UTC date",
+      click: () => {
+        const currentUtcDate = getCurrentUtcDate();
+        clipboard.writeText(currentUtcDate);
+      },
+    },
+    {
       label: "Copy UTC time",
       click: () => {
         const currentUtcTime = getCurrentUtcTime();
@@ -59,6 +66,11 @@ async function createTray() {
   tray.setContextMenu(contextMenu);
   updateTrayTitle();
   setInterval(updateTrayTitle, 1000);
+}
+
+function getCurrentUtcDate() {
+  const now = new Date();
+  return now.toISOString().substring(0, 10);
 }
 
 function getCurrentUtcTime() {
